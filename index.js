@@ -5,7 +5,7 @@ var uuid = require('uuid').v4;
 
 const isBrowser = !!(document && window);
 
-var findScritps = (node) => {
+var findScritps = function(node) {
   if (node.tagName && node.tagName === 'script') {
     return (node.childNodes || []).map((n) => n.value);
   }
